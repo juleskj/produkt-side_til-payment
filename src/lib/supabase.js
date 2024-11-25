@@ -20,3 +20,15 @@ export async function getSubs() {
   let data = await response.json();
   return data;
 }
+
+//ny funcktion hvor vi poster subs hvor den for noget data
+export async function postSub(subdata) {
+  const response = await fetch(url, {
+    method: "POST",
+    headers: headersList,
+    body: JSON.stringify(subdata),
+  });
+
+  let data = await response.json();
+  return data;
+}
